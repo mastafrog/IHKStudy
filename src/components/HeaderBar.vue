@@ -1,18 +1,15 @@
-<template>
-  <nav class="nav is-outlined has-shadow">
-    <div class="container">
-      <div class="nav-left">
-        <router-link class="nav-item" to="/">Home</router-link>
-        <router-link class="nav-item" to="/quiz">Quiz</router-link>
-        <router-link class="nav-item" to="/cart">Cart ({{ cartCount }})</router-link>
-      </div>
-      <span class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </span>
-    </div>
-  </nav>
+<template lang="pug">
+nav.nav.is-outlined.has-shadow
+  .container
+    .nav-left
+      router-link.nav-item(to='/') Home
+      router-link.nav-item(to='/quiz') Quiz
+      router-link.nav-item(to='/editor') Editor ({{ cartCount }})
+
+    span.nav-toggle
+      span
+      span
+      span
 </template>
 
 <script>

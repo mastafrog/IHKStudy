@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CartPage from '@/pages/CartPage'
+import MarkdownEditorPage from '@/pages/MarkdownEditorPage'
 // import HomePage from '@/pages/HomePage'
 import ProductPage from '@/pages/ProductPage'
 import QuizePage from '@/pages/QuizePage'
@@ -13,11 +13,13 @@ export default new Router({
     path: '/',
     name: 'home',
     component: ContentListPage
-  },
+  /*  children: [
+      { path: '', component: UserHome },
+  */ },
   {
-    path: '/cart',
-    name: 'cart',
-    component: CartPage
+    path: '/editor:id',
+    name: 'editor',
+    component: MarkdownEditorPage
   },
   {
     path: '/product/:id',

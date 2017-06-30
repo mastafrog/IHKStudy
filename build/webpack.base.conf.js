@@ -50,7 +50,7 @@ module.exports = {
       {
           test: /\.less$/,
           loader: "style!css!less"
-      }
+      },
       {
           test: /\.less$/,
           loader: 'vue-style-loader!css-loader!less-loader'

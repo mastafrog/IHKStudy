@@ -21,7 +21,6 @@
     methods: {
       ...mapActions([
         'getAllProducts'
-
       ])
     }
   }
