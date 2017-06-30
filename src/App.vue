@@ -24,6 +24,7 @@ export default {
   components: {
     HeaderBar
   },
+
   name: 'app'
 }
 </script>

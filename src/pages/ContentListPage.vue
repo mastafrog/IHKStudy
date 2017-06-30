@@ -8,7 +8,7 @@
       </p>
   </div>
 
-  <transition name="fade" mode="out-in">
+  <transition-group name="fade" mode="out-in" tag="p">
   <section class="main" v-show="todos.length" v-cloak>
     <input class="toggle-all" type="checkbox" v-model="allDone">
     <ul class="todo-list">
@@ -31,11 +31,9 @@
       <li><a href="#/active" :class="{ selected: visibility == 'active' }">Active</a></li>
       <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Completed</a></li>
     </ul>
-    <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
-          Clear completed
-        </button>
+    <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">Clear completed</button>
   </div>
-  </transition>
+  </transition-group>
   </div>
 </section>
 </template>
